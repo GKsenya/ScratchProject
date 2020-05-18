@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ScratchProject:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ScratchProject</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ScratchPad.war">
+      <element id="artifact" artifact-name="ScratchProject:war exploded" />
+    </root>
+  </artifact>
+</component>

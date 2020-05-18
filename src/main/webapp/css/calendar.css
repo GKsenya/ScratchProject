@@ -1,0 +1,315 @@
+@font-face {
+  font-family: Allura; /* Гарнитура шрифта */
+  src: url(Allura-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+html {
+  background: url('../images/unnamed.jpg') fixed;
+  background-size: cover;
+  background-position-y: -70px;
+}
+
+body {
+  font: 1em "Comic Sans MS";
+  color: white;
+}
+
+body#regular_page, body#print_view_page {
+  font: 0.8em "Comic Sans MS";
+  text-align: center;
+}
+
+body#regular_page #calendar_main_div {
+  text-align: center;
+  padding-top: 60px;
+}
+
+#calendar_print_view_main_div {
+}
+
+.month_year_header {
+	text-align: center;
+}
+
+body#regular_page .month_year_header {
+  font: 0.9em "Comic Sans MS";
+  padding: 1em;
+}
+
+body#print_view_page td.month_year_header {
+  font: 1.2em "Comic Sans MS";
+}
+
+body#print_view_page td.day_cell {
+  font-size: 0.9em;
+  cursor:pointer;
+}
+
+#calendar_nav_table {
+  padding-top: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td#prev_link, td#next_link, td#link_to_month_view {
+  vertical-align: middle;
+}
+
+#prev_link {
+  text-align: left;
+}
+
+#link_to_month_view {
+  text-align: center;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#next_link {
+  text-align: right;
+}
+
+.th_day_cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+body#regular_page .day_cell, .empty_day_cell, .today_cell {
+  text-align: center;
+  vertical-align: middle;
+}
+
+body#print_view_page .day_cell, .empty_day_cell {
+  text-align: right;
+  vertical-align: top;
+}
+
+.calendar{
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -4%;
+  border: 5px;
+  border: darkgray;
+  padding-bottom: 20px;
+}
+
+.calendar_title{
+  width: 50%;
+  height: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px silver;
+  cellspacing: 0;
+  cellpadding: 4;
+}
+.calendar_title h2{
+  color: white;
+  font-family: 'Allura';
+}
+.month_text{
+  text-shadow: 1px 1px 1px black;
+  font-family: 'Allura';
+  font-size: 3.5em;
+}
+.year_text{
+  text-shadow: 1px 1px 1px black;
+  font-family: 'Allura';
+  font-size: 2.5em;
+}
+.arnold{
+  text-align: center;
+  width: 80%;
+  height: 63%;
+  margin: 1% 7% 3% 7%;
+  background: -webkit-linear-gradient( rgba(256, 255, 255, 0.7), rgba(1, 8, 8, 0.20));
+  padding: 10px 50px 100px;
+  border-radius: 20px;
+  align-content: center;
+}
+td#message{
+  line-height: 70%;
+  size: 5px;
+  color: #ffc11e;
+}
+.arnold td {
+  padding: 4px;
+  color: white;
+  font-weight: lighter;
+  font-size: 1.5em;
+  border-spacing: 20px;
+  text-shadow: 1px 1.5px 1.5px black;
+}
+.arnold th {
+  padding: 4px;
+  font-weight: bolder;
+  color: #289fc9;
+  text-shadow: 1px 1px 1px black;
+}
+.arnold button {
+  border: 3px solid #6ad0e6;
+  background-color: #6ad0e6;
+  border-radius: 30px;
+  color: white;
+}
+.arnold td#center{
+  text-align: center;
+}
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+input:single-button {
+  border: 3px solid #5b247a;
+  border-radius: 30px;
+  position: relative;
+  margin: 0 auto;
+}
+.user{
+  width: 100%;
+  background: -webkit-linear-gradient( rgba(91, 36, 122, 1), rgba(91, 36, 122, 0.7), rgba(91, 36, 122, 0.0));
+  height: 70px;
+  padding: 30px 0px 8px 28px;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+.userAbout{
+  margin-top: 1%;
+}
+.user button{
+  float: right;
+  margin-top: 0%;
+  border-radius: 15px;
+  size: 20px;
+  background-color: #ffffff;
+  color: #5b247a;
+  margin-right: 150px;
+}
+.user p{
+  margin-right: 20px;
+  margin-top: -4px;
+  float: right;
+  font-weight: bolder;
+  font-size: x-large;
+  color: white;
+  font-family: "Allura";
+}
+.arnold2{
+  float: left;
+  text-align: center;
+  width: 30%;
+  height: 43%;
+  margin: 0 10px 0 200px;
+  background: -webkit-linear-gradient(
+          rgba(255, 255, 255, 0.85),
+          rgba(8, 8, 8, 0.2));
+  padding: 30px 20px 100px;
+  border-radius: 20px;
+  align-content: center;
+}
+.arnold3{
+  float: right;
+  text-align: center;
+  width: 30%;
+  height: 43%;
+  margin: 0 200px 0 10px;
+  background: -webkit-linear-gradient(
+          rgba(255, 255, 255, 0.85),
+          rgba(8, 8, 8, 0.20));
+  padding: 30px 20px 100px;
+  border-radius: 20px;
+  align-content: center;
+}
+td#message{
+  line-height: 70%;
+  size: 5px;
+  color: #ffc11e;
+}
+.arnold2 td {
+  font-size: 20px;
+  padding: 4px;
+  font-weight: lighter;
+  border-spacing: 20px;
+  text-shadow: 1px 1px 1px black;
+}
+.arnold2 th {
+  padding: 4px;
+  font-weight: bolder;
+  color: #289fc9;
+}
+.arnold_month{
+  text-align: center;
+  width: 60%;
+  height: 43%;
+  margin: 0 20% 2% 20%;
+  background: -webkit-linear-gradient(
+          rgba(255, 255, 255, 0.85),
+          rgba(8, 8, 8, 0.2));
+  padding: 30px 20px 100px;
+  border-radius: 20px;
+  align-content: center;
+}
+
+.arnold2 button {
+  border: 3px solid #6ad0e6;
+  background-color: #6ad0e6;
+  border-radius: 30px;
+  color: white;
+}
+.arnold2 td#center{
+  text-align: center;
+}
+
+.calendar_title{
+  width: 80%;
+  height: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px silver;
+  cellspacing: 0;
+  cellpadding: 4;
+}
+
+td#message{
+  line-height: 70%;
+  size: 5px;
+  color: #ffc11e;
+}
+.arnold3 td, .arnold_month td{
+  font-size: 20px;
+  padding: 4px;
+  font-weight: lighter;
+  border-spacing: 20px;
+  text-shadow: 1px 1px 1px black;
+}
+.arnold3 th, .arnold_month th {
+  padding: 4px;
+  font-weight: bolder;
+  color: #289fc9;
+}
+.arnold3 button, .arnold_month button {
+  border: 3px solid #6ad0e6;
+  background-color: #6ad0e6;
+  border-radius: 30px;
+  color: white;
+}
+.arnold3 td#center, .arnold_month td#center{
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='time'] {
+  -moz-appearance: textfield;
+}
+.text{
+  color: #13015c;
+}
+time{
+
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Archetype Created Web Application</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Sign Up servlet -->
+    <servlet>
+        <servlet-name>signUp</servlet-name>
+        <servlet-class>ScratchPad.Servlets.SignUpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>signUp</servlet-name>
+        <url-pattern>/signUp</url-pattern>
+    </servlet-mapping>
+
+    <!-- Sign In servlet -->
+    <servlet>
+        <servlet-name>signIn</servlet-name>
+        <servlet-class>ScratchPad.Servlets.SignInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>signIn</servlet-name>
+        <url-pattern>/signIn</url-pattern>
+    </servlet-mapping>
+
+    <!-- Calendar servlet -->
+    <servlet>
+        <servlet-name>calendar</servlet-name>
+        <servlet-class>ScratchPad.Servlets.CalendarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>calendar</servlet-name>
+        <url-pattern>/calendar</url-pattern>
+    </servlet-mapping>
+
+    <!-- Calendar servlet -->
+    <servlet>
+        <servlet-name>newTask</servlet-name>
+        <servlet-class>ScratchPad.Servlets.NewTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newTask</servlet-name>
+        <url-pattern>/newTask</url-pattern>
+    </servlet-mapping>
+
+    <!-- ToDo servlet -->
+    <servlet>
+        <servlet-name>todo</servlet-name>
+        <servlet-class>ScratchPad.Servlets.DayTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>todo</servlet-name>
+        <url-pattern>/todo</url-pattern>
+    </servlet-mapping>
+
+    <!-- monthTask servlet -->
+    <servlet>
+        <servlet-name>monthTask</servlet-name>
+        <servlet-class>ScratchPad.Servlets.MonthTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>monthTask</servlet-name>
+        <url-pattern>/monthTask</url-pattern>
+    </servlet-mapping>
+
+    <!-- yearTask servlet -->
+    <servlet>
+        <servlet-name>yearTask</servlet-name>
+        <servlet-class>ScratchPad.Servlets.YearTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>yearTask</servlet-name>
+        <url-pattern>/yearTask</url-pattern>
+    </servlet-mapping>
+
+    <!-- newMonthTask servlet -->
+    <servlet>
+        <servlet-name>newMonthTask</servlet-name>
+        <servlet-class>ScratchPad.Servlets.NewMonthTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newMonthTask</servlet-name>
+        <url-pattern>/newMonthTask</url-pattern>
+    </servlet-mapping>
+
+    <!-- newYearTask servlet -->
+    <servlet>
+        <servlet-name>newYearTask</servlet-name>
+        <servlet-class>ScratchPad.Servlets.NewYearTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newYearTask</servlet-name>
+        <url-pattern>/newYearTask</url-pattern>
+    </servlet-mapping>
+
+    <!-- Task deleting servlet -->
+    <servlet>
+        <servlet-name>delTask</servlet-name>
+        <servlet-class>ScratchPad.Servlets.DelTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delTask</servlet-name>
+        <url-pattern>/delTask</url-pattern>
+    </servlet-mapping>
+
+    <!-- Task changing servlet -->
+    <servlet>
+        <servlet-name>editTask</servlet-name>
+        <servlet-class>ScratchPad.Servlets.EditTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>editTask</servlet-name>
+        <url-pattern>/editTask</url-pattern>
+    </servlet-mapping>
+
+</web-app>
