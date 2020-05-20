@@ -6,7 +6,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Calendar</title>
+    <title>ScratchPad: year</title>
     <link rel="stylesheet" href="css/remodel.css">
     <link rel="stylesheet" href="css/remodel-default-theme.css">
     <link rel="StyleSheet" href="css/calendar.css" type="text/css" media="screen"/>
@@ -30,13 +30,14 @@
 
 <body id="regular_page">
 <div class="user">
-    <button onclick="location.href='calendar.jsp?year=<%=year%>'" style="float: left">Назад</button>
+    <p id="logo">ScratchPad</p>
     <button onclick="location.href='index.jsp'" style="float: right">Выйти</button>
     <p><%=user.getName()%>
     </p>
 
 </div>
 <div id="calendar_print_view_main_div">
+    <button onclick="location.href='calendar.jsp'" class="back_button"><p>‹</p></button>
         <h2 class="month_text"><%=year%>
         </h2>
 

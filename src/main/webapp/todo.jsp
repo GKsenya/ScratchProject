@@ -6,7 +6,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Calendar</title>
+    <title>ScratchPad: day</title>
     <link rel="stylesheet" href="css/remodel.css">
     <link rel="stylesheet" href="css/remodel-default-theme.css">
     <link rel="StyleSheet" href="css/calendar.css" type="text/css" media="screen"/>
@@ -40,17 +40,19 @@
 
 <body id="regular_page">
 <div class="user">
-    <button onclick="location.href='calendar.jsp?month=<%=month%>&year=<%=year%>'" style="float: left">Назад</button>
+    <p id="logo">ScratchPad</p>
     <button onclick="location.href='index.jsp'" style="float: right">Выйти</button>
     <p><%=user.getName()%>
     </p>
 
 </div>
 <div id="calendar_print_view_main_div">
+    <button onclick="location.href='calendar.jsp?month=<%=month%>&year=<%=year%>'" class="back_button"><p>‹</p></button>
         <h2 class="month"><a class="year_text"><%=day%> </a><a onclick="location.href=
                 'monthTask?month=<%=month%>&monthName=<%=monthName%>&year=<%=year%>'" class = "month_text"><%=monthName%> </a>
             <a onclick="location.href=
                     'yearTask?year=<%=year%>'" class = "year_text"><%=year%></a></h2>
+</div>
     <div class="arnold2">
         <table class="calendar_title">
             <%
@@ -95,8 +97,8 @@
             <tr>
                 <%
                     for (Task task : unfixedTask) {
-                        out.println("<tr><td class=\"time\">" + "*" + "<td>");
-                        out.println("<td class=\"text\">" + task.getTask() + "<td>");
+                        out.println("<tr><td class=\"time\">" + "*" + "</td>");
+                        out.println("<td class=\"text\">" + task.getTask() + "</td>");
                         out.println("<td class=\"text\"><a href=\"#modal12\" onclick=\"unfixed("+task.getId() + ",'" + task.getTask()+"')\" title=\"Редактировать\">\uD83D\uDD89</a></td>");
                         out.println("<td class=\"text\"><a href=\"delTask?day="+day+"&month="+month+"&monthName="+monthName+"&year="+year+"&taskId="+task.getId()+"\" title=\"Удалить\">&#10007;</a></td></tr>");
                     }
@@ -126,7 +128,6 @@
             </tr>
         </table>
     </div>
-</div>
 </body>
 <script>
     function fixed(id, task, time) {

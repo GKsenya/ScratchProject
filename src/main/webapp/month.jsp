@@ -6,7 +6,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Calendar</title>
+    <title>ScratchPad: month</title>
     <link rel="stylesheet" href="css/remodel.css">
     <link rel="stylesheet" href="css/remodel-default-theme.css">
     <link rel="StyleSheet" href="css/calendar.css" type="text/css" media="screen"/>
@@ -36,19 +36,20 @@
 
 <body id="regular_page">
 <div class="user">
+    <p id="logo">ScratchPad</p>
     <button onclick="location.href='calendar.jsp?month=<%=month%>&year=<%=year%>'" style="float: left">Назад</button>
     <button onclick="location.href='index.jsp'" style="float: right">Выйти</button>
-    <p><%=user.getName()%>
-    </p>
+    <p><%=user.getName()%></p>
 
 </div>
 <div id="calendar_print_view_main_div">
+    <button onclick="location.href='calendar.jsp'" class="back_button"><p>‹</p></button>
         <h2 class="month"><a onclick="location.href=
                 'monthTask?month=<%=month%>&monthName=<%=monthName%>&year=<%=year%>'" class = "month_text"><%=monthName%> </a>
             <a onclick="location.href=
                     'yearTask?year=<%=year%>'" class = "year_text"><%=year%></a>
         </h2>
-
+</div>
     <div class="arnold_month">
         <table class="calendar_title">
 
@@ -76,8 +77,8 @@
                                   id="form">
                                 <h2 class="new" style="color: white" id="form_title">Добавление новой задачи</h2>
                                 <label style="text-align: left; color: white">Описание</label>
-                                <input type="textarea" class="form-styling2" name="task" id="task_change"
-                                       placeholder="Добавьте описание..." id="task_change">
+                                <input class="form-styling2" id="task_change" id="task_change" name="task"
+                                       placeholder="Добавьте описание..." type="textarea">
                                 <input type="submit" name="submit" class="btn-sign" value="Добавить" id="button">
                             </form>
                         </div>
@@ -86,7 +87,6 @@
             </tr>
         </table>
     </div>
-</div>
 </body>
 <script>
     function change_task(id, task) {

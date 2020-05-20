@@ -529,6 +529,7 @@ a.btn-goback:hover {
 h2.month{
     color: white;
     font-family: 'Allura';
+    margin-right: 100px;
 }
 .text{
     color: #13015c;

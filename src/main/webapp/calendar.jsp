@@ -7,12 +7,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Calendar</title>
+    <title>ScratchPad: calendar</title>
     <link rel="StyleSheet" href="css/calendar.css" type="text/css" media="screen"/>
 </head>
 
 <body id="regular_page">
 <div class="user">
+    <p id="logo">ScratchPad</p>
     <button onclick="location.href='index.jsp'" style="float: right">Выйти</button>
     <%
         HttpSession httpSession = request.getSession(true);
@@ -76,9 +77,15 @@
                         if (days[i][j] == 0) {%>
                 <td class="empty_day_cell">&nbsp;</td>
                 <%
-                } else {
+                } else
+                    if(days[i][j] == currentDayInt ){
                 %>
-                <td align="right" valign="top" class="day_cell"><a onclick="location.href=
+                <td align="right" valign="top" class="current_day_cell"><a onclick="location.href=
+                        'todo?day=<%=days[i][j]%>&month=<%=intMonth%>&monthName=<%=monthName%>&year=<%=intYear%>'"><%=days[i][j]%>
+                </a></td>
+                <%
+                        } else {
+                %> <td align="right" valign="top" class="day_cell"><a onclick="location.href=
                         'todo?day=<%=days[i][j]%>&month=<%=intMonth%>&monthName=<%=monthName%>&year=<%=intYear%>'"><%=days[i][j]%>
                 </a></td>
                 <%
